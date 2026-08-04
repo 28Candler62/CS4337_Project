@@ -14,6 +14,7 @@ foundation = "1.11.4"
 room3 = "3.0.1"
 ksp = "2.3.10" # Ensure KSP version matches your Kotlin version
 sqlite = "2.7.0"
+remoteCreationCore = "1.0.0-alpha16"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,6 +39,7 @@ androidx-room3-runtime = { group = "androidx.room3", name = "room3-runtime", ver
 androidx-room3-compiler = { group = "androidx.room3", name = "room3-compiler", version.ref = "room3" }
 androidx-room3-ktx = { group = "androidx.room3", name = "room3-ktx", version.ref = "room3" }
 androidx-sqlite-bundled = { group = "androidx.sqlite", name = "sqlite-bundled", version.ref = "sqlite" }
+androidx-compose-remote-creation-core = { group = "androidx.compose.remote", name = "remote-creation-core", version.ref = "remoteCreationCore" }
 
 
 [plugins]

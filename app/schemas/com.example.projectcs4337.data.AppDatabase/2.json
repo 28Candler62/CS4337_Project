@@ -1,0 +1,107 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "2f28b01524e31870bb6d3b9679c91925",
+    "entities": [
+      {
+        "tableName": "routes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `RouteId` TEXT NOT NULL, `RouteName` TEXT NOT NULL, `LongName` TEXT NOT NULL, `RouteType` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RouteId",
+            "columnName": "RouteId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RouteName",
+            "columnName": "RouteName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "LongName",
+            "columnName": "LongName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "RouteType",
+            "columnName": "RouteType",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "stops",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER, `StopId` TEXT, `RouteId` TEXT, `Name` TEXT, `StopCode` TEXT, `Type` TEXT, `Lat` REAL, `Lon` REAL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "StopId",
+            "columnName": "StopId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "RouteId",
+            "columnName": "RouteId",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "Name",
+            "columnName": "Name",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "StopCode",
+            "columnName": "StopCode",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "Type",
+            "columnName": "Type",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "Lat",
+            "columnName": "Lat",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "Lon",
+            "columnName": "Lon",
+            "affinity": "REAL"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '2f28b01524e31870bb6d3b9679c91925')"
+    ]
+  }
+}
