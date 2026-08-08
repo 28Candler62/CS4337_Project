@@ -14,7 +14,7 @@ interface StopsDao {
     @Query("SELECT * FROM stops")
     suspend fun getStops(): List<MetroStop>
 
-    @Query("SELECT Lat as lat, Lon as lng, Name as title FROM stops")
+    @Query("SELECT Lat as lat, Lon as lng, RouteId as title FROM stops")
     suspend fun getAllMarkers(): List<MapMarker>
 
     @Query("SELECT Lat as lat, Lon as lng, Name as title FROM stops WHERE RouteId = :route")

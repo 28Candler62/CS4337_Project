@@ -90,9 +90,9 @@ fun ProjectCS4337App() {
     NavigationSuiteScaffold(
         navigationSuiteItems = {
             // Items...
-            item(selected = currentRoute == "Destination1", icon = { Icon(painterResource(R.drawable.ic_home), contentDescription = "HOME") }, onClick = { navController.navigate("Destination1") }) //{ Text("Dest 1") }
-            item(selected = currentRoute == "Destination2", icon = { Icon(painterResource(R.drawable.ic_home), contentDescription = "HOME") }, onClick = { navController.navigate("Destination2") }) //{ Text("Dest 2") }
-            item(selected = currentRoute == "Destination3", icon = { Icon(painterResource(R.drawable.ic_home), contentDescription = "HOME") }, onClick = { navController.navigate("Destination3") }) //{ Text("Dest 3") }
+            item(selected = currentRoute == "Destination1", icon = { Icon(painterResource(R.drawable.map_search_40px), contentDescription = "HOME") }, onClick = { navController.navigate("Destination1") }) //{ Text("Dest 1") }
+            item(selected = currentRoute == "Destination2", icon = { Icon(painterResource(R.drawable.route_40px), contentDescription = "HOME") }, onClick = { navController.navigate("Destination2") }) //{ Text("Dest 2") }
+            item(selected = currentRoute == "Destination3", icon = { Icon(painterResource(R.drawable.menu_open_40px), contentDescription = "HOME") }, onClick = { navController.navigate("Destination3") }) //{ Text("Dest 3") }
         },
         content = { // No innerPadding parameter here
             Column(
