@@ -48,14 +48,17 @@ The application is intended to help tourists, local residents, commuters, and an
 ### Stops Map
 
 The Stops Map provides an overview of available METRO stops. Users can explore the map and interact with standard Google Maps controls.
+![Stops Map](images/stops_map.png)
 
 ### Route Map
 
 The Route Map focuses on the stops belonging to the route selected by the user. Restricting the displayed markers reduces visual clutter and makes it easier to identify locations accessible along a particular route.
+![Route Map](images/route_map.png)
 
 ### Route Selection
 
 The Route Selection screen provides a searchable/drop-down interface for selecting an available METRO route.
+![Route Select](images/route_select.png)
 
 After selecting a route, the application updates the route information and uses the selected route to determine which stops are displayed on the Route Map.
 
@@ -129,7 +132,7 @@ RouteSelectViewModel
         v                    v
    Stops Map             Route Map
 ```
-
+![Architecture](images/Architecture.drawio.png)
 Transit route and stop information retrieved from the Houston METRO API is stored locally. The application then queries this data when determining which markers and route information should be displayed.
 
 ## Google Maps Configuration
